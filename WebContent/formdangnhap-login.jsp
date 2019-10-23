@@ -10,7 +10,7 @@
 	<%@ include file="formdangnhap.jsp"%>
 	<%
 		if (session.getAttribute("un") != null) {
-			response.sendRedirect("formdangnhap-t1.jsp");
+			response.sendRedirect("homescreen.jsp");
 		} else {
 	%>
 	<form action="kiemtradangnhap.jsp" method="post"

@@ -35,7 +35,13 @@
 			session.setAttribute("gh", gh);
 			//hien thi gio hang
 			ArrayList<gioHangBean> ds = gh.ds;
-			response.sendRedirect("hienthigio.jsp");
+			
+			if (session.getAttribute("un") != null) {
+				response.sendRedirect("giohangscreen.jsp");
+			} else {
+				session.setAttribute("saukhidangnhap", "chuyendengiohang");
+				response.sendRedirect("formdangnhap-login.jsp");
+			}
 
 		}
 		if (action != null && action.equals("xoa")) {
@@ -52,7 +58,7 @@
 			//luu session gh
 			session.setAttribute("gh", gh);
 			ArrayList<gioHangBean> ds = gh.ds;
-			response.sendRedirect("hienthigio.jsp");
+			response.sendRedirect("giohangscreen.jsp");
 		}
 		
 		if (action != null && action.equals("thayDoiSoLuong")) {
@@ -69,7 +75,7 @@
 			//luu session gh
 			session.setAttribute("gh", gh);
 			ArrayList<gioHangBean> ds = gh.ds;
-			response.sendRedirect("hienthigio.jsp");
+			response.sendRedirect("giohangscreen.jsp");
 		}
 	%>
 </body>

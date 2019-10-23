@@ -23,8 +23,8 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="formdangnhap-t1.jsp">Trang 1 </a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Trang 2</a></li>
+				<li class="nav-item"><a class="nav-link" href="homescreen.jsp">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="giohangscreen.jsp">Giỏ hàng</a></li>
 				<li class="nav-item"><a class="nav-link" href="formdangnhap-login.jsp">
 				<%if(session.getAttribute("un")==null) {%>
 					Dang nhap
@@ -32,8 +32,8 @@
 				
 				
 				</a></li>
-				<li class="nav-item"><a class="nav-link disabled" href="#"
-					tabindex="-1" aria-disabled="true">Disabled</a></li>
+				<li class="nav-item"><a class="nav-link" href="dangxuat.jsp"
+					tabindex="-1" aria-disabled="true">Đăng xuất</a></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search"

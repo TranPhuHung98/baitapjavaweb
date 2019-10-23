@@ -12,7 +12,10 @@
 		String pw = request.getParameter("txtpw");
 		if(!un.isEmpty()){
 			session.setAttribute("un", un);
-			response.sendRedirect("formdangnhap-t1.jsp");
+			String saukhidangnhap =(String) session.getAttribute("saukhidangnhap");
+			if(saukhidangnhap.equals("chuyendengiohang"))
+				response.sendRedirect("giohangscreen.jsp");
+			else response.sendRedirect("homescreen.jsp");
 		}
 	%>
 </body>
